@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jenis Ruangan - RS Silajang</title>
+    <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <ul>
+            <li><button onclick="location.href='dashboard.html'">Dashboard</button></li>
+            <li><button onclick="location.href='sdm.html'">SDM</button></li>
+            <li><button onclick="location.href='laporan.html'">Laporan</button></li>
+        </ul>
+        <p class="sidebar-back-button">
+            <button onclick="location.href='index.html'">Kembali</button>
+        </p>
+    </div>    
+
+    <div class="container">
+        <img src="logo.jpeg" alt="Logo RS Silajang" class="logo-img"> 
+        <h1>Jenis Ruangan</h1>
+        <ul class="room-list">
+            <li class="room-item"><button onclick="showReport('Gizi')">Gizi</button></li>
+            <li class="room-item"><button onclick="showReport('Farmasi')">Farmasi</button></li>
+            <li class="room-item"><button onclick="showReport('Laboratorium')">Laboratorium</button></li>
+            <li class="room-item"><button onclick="showReport('IPSRS')">IPSRS</button></li>
+            <li class="room-item"><button onclick="showReport('Kesling')">Kesling</button></li>
+            <li class="room-item"><button onclick="showReport('Epidemiologi')">Epidemiologi</button></li>
+            <li class="room-item"><button onclick="showReport('Laundry')">Laundry</button></li>
+            <li class="room-item"><button onclick="showReport('Rekam_Medis')">Rekam Medis</button></li>
+            <li class="room-item"><button onclick="showReport('CSSD')">CSSD</button></li>
+            <li class="room-item"><button onclick="showReport('Radiologi')">Radiologi</button></li>
+            <li class="room-item"><button onclick="showReport('Pemulasaran_Jenazah')">Pemulasaran Jenazah</button></li>
+        </ul>
+        
+        <div id="report-link-container" style="display: none; margin-top: 20px;">
+            <h2 id="room-name"></h2>
+            <p>
+                <button id="report-link" onclick="">Laporan</button>
+            </p>
+            <p class="back-button">
+                <button onclick="location.href='index.html'">Kembali</button>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        const reportLinks = {
+            Gizi: 'https://drive.google.com/drive/folders/1j1lu3DuL_EeClfrnGqum8Xdyb7kxrVh4?usp=drive_link',
+            Farmasi: 'https://drive.google.com/drive/folders/1H4o8i5Ph6q4mcIkefTa8l-kzuLodqZTY?usp=drive_link',
+            Laboratorium: 'https://drive.google.com/drive/folders/1OwJylGeQko9fZ9YTUa8YKmbncPxr6URq?usp=drive_link',
+            IPSRS: 'https://drive.google.com/drive/folders/15Wv2ZKcjQ9h5ybyArhT7qkG5W7z8sQlr?usp=drive_link',
+            Kesling: 'https://drive.google.com/drive/folders/180mjmXJMozmsJQ5v_wcmzyZby4NJ3jdP?usp=drive_link',
+            Epidemiologi: 'https://drive.google.com/drive/folders/1-qifW3Cr68v8gHhLSls-D354wjOSoh18?usp=drive_link',
+            Laundry: 'https://drive.google.com/drive/folders/1uEtINg2qYvZtVYQHwQmLLrgrl6MBHyjZ?usp=sharing',
+            Rekam_Medis: 'https://drive.google.com/drive/folders/1FewLwtt2t5-P2E3joe7jSB6ci53jsjAX?usp=drive_link',
+            CSSD: 'https://drive.google.com/drive/folders/1ofr8Wa3HjnL2HxYxgbNHKSHPQ7wlxCxU?usp=drive_link',
+            Radiologi: 'https://drive.google.com/drive/folders/1k7sgmihj9e0jlWScGPuNMFtVZ4L6PFvF?usp=drive_link',
+            Pemulasaran_Jenazah: 'https://drive.google.com/drive/folders/1U396y1b-2i6vfnzveH5p50vzZSDu-fOa?usp=drive_link'
+        };
+
+        function showReport(roomName) {
+            document.getElementById('room-name').textContent = roomName;
+
+            // Set report link
+            const reportLinkButton = document.getElementById('report-link');
+            reportLinkButton.onclick = () => window.open(reportLinks[roomName], '_blank');
+            document.getElementById('report-link-container').style.display = reportLinks[roomName] ? 'block' : 'none'; 
+        }
+    </script>
+</body>
+</html>

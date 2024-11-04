@@ -1,0 +1,61 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: url('rsudd.jpeg'); /* Ganti dengan path foto Anda */
+    background-size: cover; /* Menutupi seluruh area */
+    background-position: center; /* Posisi tengah */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    height: auto; /* Biarkan tinggi otomatis */
+    padding: 20px;
+    background-color: rgba(247, 245, 245, 0.9); /* Background dalam putih dengan transparansi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+}
+
+.container h1 {
+    margin-bottom: 20px; /* Ruang antara H1 dan H2 */
+}
+
+.container h2 {
+    margin-bottom: 20px; /* Ruang antara H2 dan tombol */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #28a745; /* Tombol hijau */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838; /* Warna tombol saat hover */
+}
+
+.schedule {
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 50%; /* Agar gambar tidak melebihi lebar kontainer */
+    height: auto;    /* Mempertahankan rasio aspek */
+    margin-bottom: 70px; /* Spasi di bawah gambar */
+}

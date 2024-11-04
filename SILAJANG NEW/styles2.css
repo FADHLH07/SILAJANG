@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: rgb(247, 245, 245); /* Background luar putih */
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px; /* Width of the sidebar */
+    background-color: #17882a; /* Green background color */
+    padding: 15px; /* Padding inside the sidebar */
+    position: fixed; /* Fix the sidebar position */
+    height: 100%; /* Full height of the viewport */
+    overflow-y: auto; /* Scroll if content exceeds height */
+}
+
+.container {
+    margin-left: 220px; /* Space for the sidebar */
+    padding: 20px; /* Padding for the content */
+    flex: 1; /* Allow to grow */
+}
+
+.logo {
+    width: 30%; /* Full width for logo */
+}
+
+.logo-img {
+    width: 30%; /* Set width for the logo */
+    margin: 0 auto 20px; /* Center the logo and add space below */
+    display: block; /* Make sure the image is treated as a block element */
+}
+
+
+.container h1 {
+    margin-bottom: 20px; /* Space between H1 and next element */
+}
+
+h1 {
+    margin-top: 20px; /* Adjust this value to control the space */
+}
+
+
+button {
+    padding: 10px 20px; /* Button padding */
+    margin: 10px; /* Margin around buttons */
+    background-color: #ffffff; /* White background for contrast */
+    color:  #4e7af5; /* Green text for buttons */
+    border: 2px solid  #4e7af5;; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Animation on hover */
+}
+
+button:hover {
+    background-color: #e9ecef; /* Light grey on hover */
+}
+
+ul {
+    display: grid; /* Use grid layout for buttons */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Space between buttons */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin-bottom: 80px; /* Bottom margin to avoid overlap */
+}
+
+.schedule {
+    margin-top: 10px; /* Space above schedule */
+    text-align: center;
+}
+
+.back-button {
+    position: fixed; /* Make it fixed */
+    bottom: 20px; /* Space from the bottom */
+    left: 20px; /* Space from the left */
+    z-index: 10; /* Higher z-index to ensure visibility */
+}
+
+.back-button button {
+    color: rgb(255, 255, 255); /* Change text color to white */
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Remove border */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+
+.room-list {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin-bottom: 3px; /* Adjust this value to reduce space */
+}
+
+
+.room-item {
+    margin-bottom: 15px; /* Space between items */
+}
+
+.room-item button {
+    width: 100%; /* Make button full width */
+    padding: 15px; /* Increase button height */
+    background-color: #4f86ec; /* Green background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.room-item button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+.table-container {
+    max-height: 300px; /* Set a fixed height for the table container */
+    overflow-y: auto; /* Enable vertical scrolling */
+    margin-top: 20px; /* Space above the table */
+    border: 1px solid #ddd; /* Optional: border around the table */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse; /* Combine borders */
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #4e7af5; /* Border around cells */
+    padding: 8px; /* Padding for cells */
+    text-align: left; /* Center text in cells */
+}
+
+.schedule-table th {
+    background-color: #f2f2f2; /* Background for header */
+}
+
+.sidebar button {
+    padding: 10px 20px; /* Button padding */
+    margin: 10px; /* Margin around buttons */
+    background-color: #ffffff; /* White background for contrast */
+    color: #29ad3f; /* Green text for buttons */
+    border: 2px solid  #29ad3f; /* Green border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Animation on hover */
+}
+
+.sidebar-back-button {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from bottom */
+    left: 20px; /* Distance from left */
+    z-index: 10; /* Higher z-index to ensure visibility */
+}
+
+.sidebar-back-button button {
+    color: white; /* Text color */
+    background-color: #17882a; /* Background color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+}
+
+#report-link-container {
+    display: none; /* Initially hidden */
+    text-align: center; /* Center text inside the container */
+    margin-top: 20px;
+}
+
+#report-link {
+    margin-top: 10px; /* Space above the button */
+}
+
+

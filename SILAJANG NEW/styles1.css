@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background-color: rgb(247, 245, 245); /* Background luar putih */
+}
+
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px; /* Adjust as needed */
+    background-color: #17882a; /* Example background color */
+    padding: 15px;
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Fix the sidebar position */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    overflow-y: auto; /* Scroll if content exceeds viewport height */
+}
+
+.container {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 220px; /* Adjusted to prevent overlap (200px sidebar + 20px padding) */
+}
+
+.logo {
+    max-width: 80%; /* Agar gambar tidak melebihi lebar kontainer */
+    height: auto; /* Mempertahankan rasio aspek */
+    margin-bottom: 40px; /* Spasi di bawah gambar */
+}
+
+.location-title {
+    margin-top: 40px; /* Adjust as needed for spacing */
+}
+
+.map {
+    margin-top: 20px; /* Space above the map */
+}
+
+.container h1 {
+    margin-bottom: 20px; /* Ruang antara H1 dan H2 */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ffffff; /* Tombol putih untuk kontras */
+    color: #28a745; /* Teks tombol hijau */
+    border: 2px solid #28a745; /* Border hijau */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Animasi saat hover */
+}
+
+button:hover {
+    background-color: #e9ecef; /* Warna tombol saat hover */
+}
+
+ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* 3 tombol per kolom */
+    gap: 10px; /* Spasi antara tombol */
+    list-style: none; /* Menghilangkan bullet */
+    padding: 0; /* Menghilangkan padding */
+    margin-bottom: 80px; /* Spasi bawah agar tidak tertutupi tombol Kembali */
+}
+
+.schedule {
+    margin-top: 10px;
+}
+
+.back-button {
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Distance from bottom */
+    left: 20px; /* Distance from left */
+    z-index: 10; /* Higher z-index to ensure visibility */
+}
+
+.back-button button {
+    color: white; /* Text color */
+    background-color: #17882a; /* Background color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding */
+    cursor: pointer; /* Pointer cursor */
+}
+
+.back-button .icon {
+    width: 20px; /* Sesuaikan ukuran ikon */
+    height: auto; /* Mempertahankan rasio aspek */
+    margin-right: 5px; /* Spasi antara ikon dan teks */
+}
